@@ -1,6 +1,5 @@
 # po20151110svn
 #
-# Techologii razrabonki PO
-# 2015
+# Techologii razrabotki PO, 2015
 #
 
