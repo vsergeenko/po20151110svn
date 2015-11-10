@@ -1,4 +1,6 @@
 # po20151110svn
 #
-# Технологии разработки ПО
-# 
+# Techologii razrabonki PO
+# 2015
+#
+
