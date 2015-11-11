@@ -6,5 +6,5 @@ AC_CHECK_HEADER([stdio.h],
 		[Define to 1 if you have <stdio.h>.])],
 	[AC_MSG_ERROR([sorry, can't do anything for you])])
 AC_CHECK_LIB([C],[printf])
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([-Wall foreign])
 AC_OUTPUT
