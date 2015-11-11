@@ -4,7 +4,7 @@ BINDIR = /usr/local/bin
 
 all: hello
 
-hello: hello.c
+hello: hello.o
 	$(CC) -o hello $(CFLAGS) hello.o
 
 .c.o:
@@ -14,7 +14,11 @@ install: hello
 	cp hello $(BINDIR)/hello
 
 clean:
-	rm hello hello.o
+	rm -f hello hello.o hello.tar.gz
 
 uninstall:
 	rm $(BINDIR)/hello
+
+distrib:
+	tar czf hello.tar.gz *.c Makefile* configure.ac INSTALL README
+
