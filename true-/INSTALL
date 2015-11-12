@@ -1,0 +1,12 @@
+For install, please, follow these steps:
+1. make
+2. sudo make install
+
+OR
+
+1. ./configure
+2. make
+3. sudo make install
+
+For uninstall, please, use:
+sudo make uninstall
