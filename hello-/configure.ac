@@ -1,5 +1,5 @@
 AC_INIT([hello], [0.1])
-AC_PROG_CC([gcc cc])
+AC_PROG_CC
 AC_CONFIG_FILES([Makefile])
 AC_CHECK_HEADER([stdio.h],
 	[AC_DEFINE([HAVE_STDIO_H], [1],

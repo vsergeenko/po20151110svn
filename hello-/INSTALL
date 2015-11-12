@@ -6,7 +6,7 @@ OR
 
 1. ./configure
 2. make
-3. make install
+3. sudo make install
 
 For uninstall, please, use:
 sudo make uninstall
