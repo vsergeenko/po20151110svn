@@ -5,7 +5,7 @@
 CC = gcc
 CFLAGS = -g -O2 -Wall
 BINDIR = /usr/local/bin
-PROG = hello
+PROG = hello-svn
 
 # main target
 all: $(PROG)
