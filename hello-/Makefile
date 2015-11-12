@@ -1,28 +1,36 @@
+# false target
 .PHONY: install uninstall clean distrib
 
+# options
 CC = gcc
 CFLAGS = -g -O2 -Wall
 BINDIR = /usr/local/bin
 PROG = hello
 
-all: hello
+# main target
+all: $(PROG)
 
-hello: hello.o
-	$(CC) -o $(PROG) $(CFLAGS) hello.o
-	strip $(PROG)
+# compile programm
+$(PROG): $(PROG).o
+	@$(CC) -o $(PROG) $(CFLAGS) $(PROG).o
 
+# compile object
 .c.o:
-	$(CC) -c $(CFLAGS) hello.c
+	@$(CC) -c $(CFLAGS) $(PROG).c
 
+# install programm
 install:
-#	cp $(PROG) $(BINDIR)/$(PROG)
-	install -g admin -m 550 $(BINDIR)/$(PROG)
+	@install -m 755 -s $(PROG) $(BINDIR)/$(PROG)
 
+# clean local temp files
 clean:
-	rm -f $(PROG) hello.o hello.tar.gz
+	@rm -f $(PROG) $(PROG).o $(PROG).tar.gz
 
+# uninstall programm
 uninstall:
-	rm $(BINDIR)/$(PROG)
+	@rm $(BINDIR)/$(PROG)
 
+# create source distrib
 distrib:
-	tar czf $(PROG).tar.gz *.c Makefile* configure.ac INSTALL README
+	@tar czfv $(PROG).tar.gz *.c Makefile* configure.ac INSTALL README
+
