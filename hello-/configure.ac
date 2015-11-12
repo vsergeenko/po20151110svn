@@ -1,4 +1,4 @@
-AC_INIT([hello], [0.1])
+AC_INIT([hello-svn], [0.1])
 AC_PROG_CC
 AC_CONFIG_FILES([Makefile])
 AC_CHECK_HEADER([stdio.h],
