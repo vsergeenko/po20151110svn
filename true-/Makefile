@@ -31,6 +31,6 @@ uninstall:
 	@rm $(BINDIR)/$(PROG)
 
 # create source distrib
-distrib:
+dist:
 	@tar czfv $(PROG).tar.gz *.c Makefile* configure.ac INSTALL README
 
