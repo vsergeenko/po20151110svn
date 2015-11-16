@@ -18,8 +18,7 @@ int main(int argc, char const *argv[])
 		return 1;
 		}
 	//ina4e vivod imeni polzovatelya
-	printf("Username: %s", username);
-	printf("\n");
+	printf("%s\n",username);
 	//vozvrat 0, 4to vse uspeshno
 	return 0;
 }
