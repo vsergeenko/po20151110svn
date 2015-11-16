@@ -23,6 +23,7 @@ int main(int argc, char const *argv[])
 		}
 	//ina4e vivod imeni polzovatelya
 	printf("Username: %s", p->pw_name);
+	printf("\n");
 	//vozvrat 0, 4to vse uspeshno
 	return 0;
 }
