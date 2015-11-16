@@ -5,7 +5,7 @@
 CC = gcc
 CFLAGS = -g -O2 -Wall
 BINDIR = /usr/local/bin
-PROG = hello
+PROG = logname-svn
 
 # main target
 all: $(PROG)
@@ -31,6 +31,6 @@ uninstall:
 	@rm $(BINDIR)/$(PROG)
 
 # create source distrib
-distrib:
+dist:
 	@tar czfv $(PROG).tar.gz *.c Makefile* configure.ac INSTALL README
 
