@@ -5,8 +5,14 @@ For install, please, follow these steps:
 OR
 
 1. ./configure
-2. make
-3. sudo make install
+2. make && sudo make install
 
 For uninstall, please, use:
 sudo make uninstall
+
+Additional features:
+1. Make distribution kit:
+make dist
+2. Delete tmp files:
+make clean
+
