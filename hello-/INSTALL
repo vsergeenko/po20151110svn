@@ -4,8 +4,11 @@ For install, please, follow these steps:
 
 OR
 
-1. ./configure
-2. make && sudo make install
+1. aclocal
+2. autoconf
+3. automake --add-missing
+4. ./configure
+5. make && sudo make install
 
 For uninstall, please, use:
 sudo make uninstall
