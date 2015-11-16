@@ -1,0 +1,8 @@
+AC_INIT(hello-svn, 0.1)
+AC_PROG_CC
+AC_CONFIG_FILES(Makefile)
+AC_CHECK_HEADER(stdio.h)
+AC_CHECK_LIB(c,printf)
+AC_CHECK_FUNC(printf)
+AM_INIT_AUTOMAKE(-Wall foreign)
+AC_OUTPUT
