@@ -1,8 +1,13 @@
 For install, please, follow these steps:
-1. make
-2. sudo make install
+1. make lib (create lib)
+2. make all (create programms)
+3. sudo make i-lib (install lib)
+4. sudo make install (install programms)
 
-For uninstall, please, use:
+Uninstall:
+- For libs
+sudo make u-lib
+- For programms
 sudo make uninstall
 
 Additional features:
