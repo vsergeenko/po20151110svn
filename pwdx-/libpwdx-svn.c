@@ -13,7 +13,7 @@ int mypwdx(char *pid, char *bufff, size_t size)
         strcat(part1, "/cwd");
         //delaem sys vizov (man 2 readlink)
         int len;
-        len = readlink(part1, bufff, sizeof(size));
+        len = readlink(part1, bufff, size);
 	//dobavlyaem konec
 	bufff[len] = '\0';
         //proverka dlini
