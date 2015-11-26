@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
-#include <errno.h>
 
 //function
 int mypwdx()
@@ -32,6 +31,6 @@ int main(int argc, char *argv[])
 	  printf("No exist process: %s\n", argv[1]);
 	  return 1;
 	}
-	printf("%s\n", buff);
+	printf("PID: %s\nPath: %s\n", argv[1], buff);
 	return 0;
 }
