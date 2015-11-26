@@ -39,6 +39,5 @@ int main(int argc, char *argv[])
 	while ( c != EOF );
 	//zakrivaem file
 	fclose(myfile);
-//	printf("%s\n", bufile);
 	return 0;
 }
