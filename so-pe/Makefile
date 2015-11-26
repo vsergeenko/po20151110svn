@@ -3,7 +3,6 @@
 
 # options
 CC = gcc
-CFLAGS = -g -O2 -Wall
 BINDIR = /usr/local/bin
 LIBDIR = /usr/local/lib
 INCLUDEDIR=/usr/local/include
@@ -13,16 +12,18 @@ all: pwdx-svn envx-svn
 lib: libpe-svn.so
 
 # compile programm
-envx-svn: envx-svn.c libpe-svn.so
-	@$(CC) -o envx-svn $(CFLAGS) envx-svn.c libpe-svn.so
-pwdx-svn: pwdx-svn.c libpe-svn.so
-	@$(CC) -o pwdx-svn $(CFLAGS) pwdx-svn.c libpe-svn.so
+envx-svn: envx-svn.o libpe-svn.so
+	$(CC) -Wall -o envx-svn envx-svn.o libpe-svn.so
+pwdx-svn: pwdx-svn.o libpe-svn.so
+	$(CC) -o pwdx-svn -Wall pwdx-svn.o libpe-svn.so
+
+# compile object
+.c.o:
+	$(CC) -fPIC -c -o $@ $^
 
 # compile libs
 libpe-svn.so: libpe-svn.o
-	@$(CC) -shared -o libpe-svn.so $(CFLAGS) libpe-svn.o
-libpe-svn.o
-	@$(CC) -c -o libpe-svn.o libpe-svn.c
+	$(CC) -shared -o libpe-svn.so -Wall libpe-svn.o
 
 # install programm
 install:
@@ -48,5 +49,5 @@ u-lib:
 
 # create source distrib
 dist:
-	@tar czfv pwdx-envx.tar.gz *.c *.so Makefile INSTALL README
+	@tar czfv pwdx-envx.tar.gz *.c *.h Makefile INSTALL README
 
