@@ -32,5 +32,5 @@ uninstall:
 
 # create source distrib
 dist:
-	@tar czfv $(PROG).tar.gz *.c Makefile* configure.ac INSTALL README
+	@tar czfv $(PROG).tar.gz *.c Makefile INSTALL README
 
