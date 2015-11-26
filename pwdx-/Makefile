@@ -1,36 +1,19 @@
 # false target
-.PHONY: install uninstall clean distrib
+.PHONY: clean
 
 # options
 CC = gcc
 CFLAGS = -g -O2 -Wall
-BINDIR = /usr/local/bin
-PROG = pwdx-svn
 
 # main target
-all: $(PROG)
+all: pwdx-svn libpwdx-svn
 
 # compile programm
-$(PROG): $(PROG).o
-	@$(CC) -o $(PROG) $(CFLAGS) $(PROG).o
-
-# compile object
-.c.o:
-	@$(CC) -c $(CFLAGS) $(PROG).c
-
-# install programm
-install:
-	@install -m 755 -s $(PROG) $(BINDIR)/$(PROG)
+pwdx-svn: pwdx-svn.c
+	@$(CC) -o pwdx-svn $(CFLAGS) pwdx-svn.c
+libpwdx-svn: libpwdx-svn.c
+	@$(CC) -o libpwdx-svn $(CFLAGS) libpwdx-svn.c
 
 # clean local temp files
 clean:
-	@rm -f $(PROG) $(PROG).o $(PROG).tar.gz
-
-# uninstall programm
-uninstall:
-	@rm $(BINDIR)/$(PROG)
-
-# create source distrib
-dist:
-	@tar czfv $(PROG).tar.gz *.c Makefile* configure.ac INSTALL README
-
+	@rm -f *.o pwdx-svn libpwdx-svn
