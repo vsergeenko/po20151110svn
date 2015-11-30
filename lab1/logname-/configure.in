@@ -1,0 +1,11 @@
+AC_INIT(logname-svn, 0.1)
+AC_PROG_CC
+AC_CONFIG_FILES(Makefile)
+AC_CHECK_HEADER(stdio.h)
+AC_CHECK_HEADER(stdlib.h)
+AC_CHECK_LIB(c,printf)
+AC_CHECK_LIB(c,getenv)
+AC_CHECK_FUNC(printf)
+AC_CHECK_FUNC(getenv)
+AM_INIT_AUTOMAKE(-Wall foreign)
+AC_OUTPUT
