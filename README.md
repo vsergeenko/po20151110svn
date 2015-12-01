@@ -1,4 +1,4 @@
-## Techologii razrabotki PO, 2015
+## Technologii razrabotki PO, 2015
 
 [main repo](https://github.com/vsergeenko/po20151110svn)
 
