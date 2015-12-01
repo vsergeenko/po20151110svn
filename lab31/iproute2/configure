@@ -7,6 +7,13 @@ INCLUDE=${1:-"$PWD/include"}
 TMPDIR=$(mktemp -d config.XXXXXX)
 trap 'status=$?; rm -rf $TMPDIR; exit $status' EXIT HUP INT QUIT TERM
 
+# Delaem proverku na nali4ie paketa Flex
+check_flex()
+{
+    echo -n " FLEX:"
+    command -v flex >/dev/null 2>&1 && (echo "Flex found.") || (echo "Flex NOT found ! Please install first.");
+}
+
 check_prog()
 {
     echo -n "$2"
@@ -319,6 +326,9 @@ EOF
 
 echo "# Generated config based on" $INCLUDE >Config
 check_toolchain
+
+# zapusk proverki
+check_flex
 
 echo "TC schedulers"
 
