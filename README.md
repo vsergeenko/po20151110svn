@@ -8,3 +8,5 @@
   + [click here](https://github.com/vsergeenko/po20151110svn/tree/pwd-env-so)
 * Lab 3.1
   + [click here](https://github.com/vsergeenko/po20151110svn/tree/lab31/lab31/iproute2)
+* Lab 3.2
+  + [click here](https://github.com/vsergeenko/lab32)
