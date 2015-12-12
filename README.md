@@ -12,4 +12,5 @@
   + [click here](https://github.com/vsergeenko/lab32)
 * Lab 4
   + [click here](https://github.com/vsergeenko/lab4/tree/addenvx)
-
+* Lab 5
+  + [click here](https://github.com/vsergeenko/po20151110svn/tree/lab5)
