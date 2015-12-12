@@ -651,7 +651,7 @@ static int pr_pri_api(char *restrict const outbuf, const proc_t *restrict const 
 }
 
 static int pr_nice(char *restrict const outbuf, const proc_t *restrict const pp){
-  if(pp->sched!=0 && pp->sched!=-1) return snprintf(outbuf, COLWID, "-");
+  if(pp->sched!=0 && pp->sched!=3 && pp->sched!=-1) return snprintf(outbuf, COLWID, "-");
   return snprintf(outbuf, COLWID, "%ld", pp->nice);
 }
 
