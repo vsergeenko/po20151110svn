@@ -1,0 +1,13 @@
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+=========> open("/proc/self/loginuid", O_RDONLY)   = 3
+open("/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+open("/lib/i386-linux-gnu/libnss_compat.so.2", O_RDONLY|O_CLOEXEC) = 3
+open("/lib/i386-linux-gnu/libnsl.so.1", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+open("/lib/i386-linux-gnu/libnss_nis.so.2", O_RDONLY|O_CLOEXEC) = 3
+open("/lib/i386-linux-gnu/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 3
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+open("/var/run/utmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
